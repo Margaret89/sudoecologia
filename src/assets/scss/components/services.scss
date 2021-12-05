@@ -1,0 +1,31 @@
+/*-------------- services -----------------*/
+.services{
+	margin-bottom: -60px;
+	
+	&__item{
+		padding-top: 18px;
+		margin-bottom: 60px;
+		position: relative;
+	}
+
+	&__item::before{
+		content: '';
+		display: inline-block;
+		width: 40px;
+		height: 4px;
+		background: #ffd1d1;
+		position: absolute;
+		top: -6px;
+		left: 0;
+	}
+
+	&__title{
+		@include font(normal, bold, 1.6rem, 1.4, $color-blue);
+		text-transform: uppercase;
+	}
+
+	&__text{
+		@include font(normal, normal, 1.6rem, 1.4, $color-grey);
+		margin-top: 11px;
+	}
+}

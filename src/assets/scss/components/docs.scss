@@ -1,0 +1,19 @@
+/*-------------- docs -----------------*/
+.docs-wrap{
+	h1 + .btn,
+	.h1 + .btn{
+		margin-top: -2rem;
+	}
+}
+
+.docs-list{
+	display: flex;
+	flex-wrap: wrap;
+	margin: -15px;
+
+	&__item{
+		max-width: calc(25% - 30px);
+		margin: 15px;
+		box-shadow: 6px 12px 0px 0px rgba(235,244,251,1);
+	}
+}

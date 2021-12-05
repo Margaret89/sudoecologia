@@ -1,0 +1,32 @@
+/*-------------- partners-slider -----------------*/
+.partners-slider{
+	display: none;
+
+	&.slick-initialized{display: block;}
+	.slick-slide{margin: 0 15px;}
+
+	.slick-list{
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+
+	.btn-arr{
+		top: 68px;
+		transform: none;
+	}
+
+	&__img{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 180px;
+		border: 1px solid #ebf4fb;
+		border-radius: 12px
+	}
+
+	&__text{
+		@include font(normal, normal, 1.6rem, 1.4, $color-text);
+		text-align: center;
+		margin-top: 20px;
+	}
+}

@@ -1,0 +1,189 @@
+/*-------------- form-site -----------------*/
+.form-page{
+	padding: 100px 0;
+
+	&__img{margin: -140px -188px -140px 0;}
+
+	.form-site{
+		padding-right: 20px;
+
+		&__bottom{
+			.btn{
+				flex-shrink: 0;
+				width: calc(50% - 15px);
+			}
+		}
+	}
+}
+
+.form-site{
+	&__title{
+		font-family: $font-oran;
+		@include font(normal, normal, 4.6rem, 1.3, $color-text);
+		text-transform: uppercase;
+		margin-bottom: 2rem;
+	}
+
+	&__text{
+		@include font(normal, normal, 1.8rem, 1.4, $color-text);
+		margin-bottom: 3.2rem;
+	}
+
+	&__label{
+		display: table;
+		@include font(normal, bold, 1.4rem, 1.4, $color-text);
+		padding: 0 12px;
+		margin-bottom: -10px;
+		margin-left: 30px;
+		background: #fff;
+		position: relative;
+	}
+
+	&__content{
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	
+	&__item{
+		width: calc(100% - 30px);
+		margin: 0 15px 30px;
+	}
+
+	&__item.error{position: relative;}
+	&__item_half{width: calc(50% - 30px);}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	input[type="password"],
+	textarea{
+		display: inline-flex;
+		align-items: center;
+		height: 6rem;
+		width: 100%;
+		font-family: $font-site;
+		@include font(normal, normal, 1.6rem, 1.4, $color-text);
+		padding: 0 30px;
+		border-radius: 12px;
+		border: 1px solid #b6c9d7;
+		outline: 0;
+		margin: 0;
+		outline: 0;
+		background: transparent;
+		box-shadow: none;
+		transition: border 0.2s ease 0s;
+	}
+
+	textarea{
+		display: block;
+		height: 10rem;
+		line-height: 1.6;
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+	}
+
+	input[type="text"]:focus,
+	input[type="number"]:focus,
+	input[type="email"]:focus,
+	input[type="password"]:focus,
+	textarea:focus{
+		border-color: $color-blue;
+	}
+
+	input[type="text"]::placeholder,
+	input[type="number"]::placeholder,
+	input[type="email"]::placeholder,
+	input[type="password"]::placeholder,
+	textarea::placeholder{
+		border-color: #b6c9d7;
+		opacity: 1;
+	}
+
+	&__item.error{
+		input[type="text"],
+		input[type="number"],
+		input[type="email"],
+		input[type="password"],
+		textarea{
+			border-color: #d898a8;
+			opacity: 1;
+		}
+
+		input[type="text"]::placeholder,
+		input[type="number"]::placeholder,
+		input[type="email"]::placeholder,
+		input[type="password"]::placeholder,
+		textarea::placeholder{
+			color: #d45974;
+		}
+	}
+
+	&__bottom{
+		display: flex;
+		align-items: center;
+	}
+
+	&__polit{
+		margin-left: 30px;
+
+		.input-check{
+			&__label{
+				font-size: 1.4rem;
+				color: #737e87;
+			}
+		}
+	}
+
+	.form-site-msg-error{
+		@include font(normal, normal, 1.2rem, 1.2, $color-red);
+		margin-top: 5px;
+	}
+
+	&__req{color: $color-red;}
+
+	&__error{
+		@include font(normal, normal, 1.6rem, 1.2, $color-red);
+		margin-bottom: 10px;
+	}
+}
+
+.success-alert{
+	max-width: 430px;
+	text-align: center;
+
+	&__title{
+		font-family: $font-oran;
+		@include font(normal, normal, 4rem, 1.3, $color-text);
+		text-transform: uppercase;
+	}
+
+	&__text{
+		@include font(normal, normal, 1.6rem, 1.4, $color-text);
+		margin-top: 2rem;
+	}
+}
+
+@media (max-width: 767px) {
+	.form-site{
+		&__content{
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		&__item,
+		&__item_half{
+			width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		&__bottom{display: block;}
+
+		&__polit{
+			margin-left: 0;
+			margin-top: 30px;
+		}
+	}
+}

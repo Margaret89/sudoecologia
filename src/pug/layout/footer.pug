@@ -37,3 +37,13 @@ footer.footer
 
 				.col-6
 					a(href="#").footer-bottom__polit Политика конфиденциальности
+
+
+<!-- Попап об успешной отправки письма -->
+#msg-success(style='display: none;')
+	.success-alert.js-success-alert
+		.success-alert__title.js-success-alert-title Ваше сообщение отправлено!
+		.success-alert__text.js-success-alert-text В ближайшее время с вами свяжется наш менеджер и обсудит все детали.
+
+.move-up.js-move-up
+	+svg('ic-arrow-up','ic-arrow-up ic-stroke', '18', '12')

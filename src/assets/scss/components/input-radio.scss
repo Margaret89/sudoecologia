@@ -1,0 +1,39 @@
+/*-------------- input-radio -----------------*/
+.input-radio{
+	&__label{
+		display: flex;
+		@include font(normal, normal, 1.4rem, 1.4, $color-text);
+		margin: 0;
+		position: relative;
+		cursor: pointer;
+	}
+
+	input[type=radio]{display: none;}
+
+	&__mark{
+		display: inline-block;
+		flex-shrink: 0;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		border: 1px solid #b6c9d7;
+		position: relative;
+	}
+
+	&__mark::after{
+		content: '';
+		display: none;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: $color-blue;
+		position: absolute;
+		@include top-center;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	&__text{margin-left: 10px;}
+	input[type=radio]:checked + &__label &__mark::after{display: inline-block;}
+}

@@ -1,0 +1,16 @@
+/*-------------- about -----------------*/
+.about{
+	overflow: hidden;
+
+	&__text{
+		font-size: 2rem;
+		line-height: 1.4;
+	}
+
+	&__img{
+		margin-right: -375px;
+		text-align: right;
+
+		img{border-radius: 12px 0 0 12px;}
+	}
+}

@@ -1,0 +1,30 @@
+/*-------------- about-contacts -----------------*/
+.about-contacts{
+	margin-top: 170px;
+	overflow: hidden;
+
+	&__img{
+		margin-right: -375px;
+		text-align: right;
+	}
+
+	&__text{padding-top: 92px;}
+}
+
+.contact-item{
+	display: flex;
+
+	&__icon{
+		flex-shrink: 0;
+		margin-right: 17px;
+
+		.icon{
+			fill: $color-blue;
+			margin-top: 5px;
+		}
+	}
+
+	&__text{
+		@include font(normal, normal, 2.6rem, 1.4, $color-text);
+	}
+}
