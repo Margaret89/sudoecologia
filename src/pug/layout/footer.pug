@@ -1,12 +1,39 @@
 footer.footer
-	.container
-		.row
-			.col-12 footer
+	.footer-top
+		.container
+			.row
+				.col-6
+					.footer-top__phone
+						a(href="tel:+78122746945") +7 (812) 274-69-45
+						br
+						a(href="tel:+78122746949") +7 (812) 274-69-49
+						
+					.footer-top__text
+						|193036, Санкт-Петербург, 4-я Советская ул., д. 7
+						br
+						a(href="mailto:1989@sudoeco.ru") 1989@sudoeco.ru
 
+				.col-6
+					-
+						var list=[
+							{text:'О компании'},
+							{text:'Услуги'},
+							{text:'Наши работы'},
+							{text:'Цены'},
+							{text:'Отзывы'},
+							{text:'Вакансии'},
+							{text:'Контакты'},
+						]
+					ul.footer-menu
+						each item in list
+							li.footer-menu__item
+								a(href="#").footer-menu__link= item.text
 
-svg(xmlns='http://www.w3.org/2000/svg' version='1.1' style='display: block; height: 0; width: 0;')
-	defs
-		filter#goo
-			fegaussianblur(in='SourceGraphic' stdDeviation='10' result='blur')
-			fecolormatrix(in='blur' mode='matrix' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7' result='goo')
-			feblend(in='SourceGraphic' in2='goo')
+	.footer-bottom
+		.container
+			.row
+				.col-6
+					.footer-bottom__copyright © 2007 — 2021 OOO "Судоэкология".
+
+				.col-6
+					a(href="#").footer-bottom__polit Политика конфиденциальности
