@@ -1,0 +1,130 @@
+/*-------------- main-menu -----------------*/
+.main-menu{
+	position: relative;
+
+	[class^='col-']{position: static;}
+
+	&__list,
+	&__item,
+	&__sub,
+	&__sub-item{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__list{
+		display: flex;
+		justify-content: space-around;
+	}
+
+	&__item{
+		display: inline-flex;
+		align-items: center;
+		position: relative;
+	}
+
+	&__item_cat{position: static;}
+
+	&__arr{
+		flex-shrink: 0;
+		margin-left: 8px;
+
+		.icon{
+			stroke: #fff;
+			transition: stroke 0.2s ease 0s;
+		}
+	}
+
+	&__link{
+		@include font(normal, bold, 1.8rem, 1.2, #fff);
+		padding: 20px 15px;
+		transition: background 0.2s ease 0s;
+	}
+
+	&__item:hover &__link{background: #0069B5;}
+
+	&__sub{
+		display: none;
+		width: 200px;
+		background: #0069B5;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 100;
+	}
+
+	&__sub-link{
+		display: block;
+		padding: 10px 15px;
+		@include font(normal, normal, 1.4rem, 1.2, #fff);
+		transition: color 0.2s ease 0s;
+	}
+
+	&__sub-item:not(:last-child){border-bottom: 1px solid rgba(255,255,255,0.16);}
+	&__sub-link:hover{background: rgba(255,255,255,0.16);}
+
+	&__item:hover &__sub,
+	&__item:hover .cat-menu{
+		display: block;
+	}
+}
+
+.cat-menu{
+	display: none;
+	width: 100%;
+	background: #0069B5;
+	padding: 35px 0;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 100;
+
+	&__list,
+	&__item,
+	&__sub,
+	&__sub-item{
+		padding: 0;
+		margin: 0;list-style: none;
+	}
+
+	&__list{
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -25px;
+		margin-right: -25px;
+	}
+
+	&__item{
+		width: calc(33.33% - 50px);
+		margin: 25px;
+	}
+
+	&__item:nth-child(2){width: calc(66.66% - 50px)}
+
+	&__link{
+		@include font(normal, bold, 2.6rem, 1.4, #fff);
+		transition: color 0.2s ease 0s;
+	}
+
+	&__link:hover{color: #68a3ce;}
+
+	&__sub{margin-top: 14px;}
+
+	&__sub-item{
+		padding: 16px 0 15px;
+		border-bottom: 1px solid #007bd5;
+	}
+
+	&__sub-link{
+		@include font(normal, normal, 1.8rem, 1.4, #fff);
+		transition: color 0.2s ease 0s;
+	}
+
+	&__sub-link:hover{color: #68a3ce;}
+
+	&__item:nth-child(2) &__sub{
+		column-count: 2;
+		column-gap: 50px;
+	}
+}

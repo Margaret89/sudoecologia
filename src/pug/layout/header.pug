@@ -1,4 +1,121 @@
 header.header
-	.container
-		.row
-			.col-12 header
+	.header-top
+		.container
+			.row
+				.col-12
+					.header-top__content
+						.header-top__logo
+							a(href="#")
+								img(src="assets/img/logo.svg", alt="")
+
+						.header-contact
+							.header-contact__icon
+								+svg('ic-place','ic-place', '16', '14')
+							.header-contact__text 193036, Санкт-Петербург, 4-я&nbsp;Советская ул., д.&nbsp;7
+
+						.header-contact
+							.header-contact__icon
+								+svg('ic-mail','ic-mail', '16', '12')
+							.header-contact__text
+								a(href="mailto:1989@sudoeco.ru") 1989@sudoeco.ru
+
+						.header-contact
+							.header-contact__icon
+								+svg('ic-call','ic-call', '16', '15')
+							.header-contact__text
+								.header-contact__phone
+									a(href="tel:+78122746945") +7 (812) 274-69-45
+									br
+									a(href="tel:+78122746949") +7 (812) 274-69-49
+	nav.main-menu
+		.container
+			.row
+				.col-12
+					ul.main-menu__list
+						li.main-menu__item
+							a(href="#").main-menu__link О компании
+								span.main-menu__arr
+									+svg('ic-arrow-down','ic-arrow-down ic-stroke', '14', '9')
+
+							ul.main-menu__sub
+								li.main-menu__sub-item 
+									a(href="#").main-menu__sub-link Пунтк 1
+
+								li.main-menu__sub-item 
+									a(href="#").main-menu__sub-link Пунтк 2
+
+								li.main-menu__sub-item 
+									a(href="#").main-menu__sub-link Пунтк 3
+
+						li.main-menu__item.main-menu__item_cat
+							a(href="#").main-menu__link Услуги
+								span.main-menu__arr
+									+svg('ic-arrow-down','ic-arrow-down ic-stroke', '14', '9')
+
+							
+							.cat-menu
+								.container
+									.row
+										.col-12
+											ul.cat-menu__list
+												li.cat-menu__item
+													a(href="#").cat-menu__link Ремонт судов
+
+													ul.cat-menu__sub
+														li.cat-menu__sub-item
+															a(href="#").cat-menu__sub-link Демонтаж судов
+
+														li.cat-menu__sub-item
+															a(href="#").cat-menu__sub-link Дефектация
+
+														li.cat-menu__sub-item
+															a(href="#").cat-menu__sub-link Испытания судов
+
+														li.cat-menu__sub-item
+															a(href="#").cat-menu__sub-link Обслуживания судов
+
+														li.cat-menu__sub-item
+															a(href="#").cat-menu__sub-link Постройка, переоборудование, модернизация судов
+												
+												li.cat-menu__item
+													a(href="#").cat-menu__link Ремонт и обслуживание оборудования судов
+
+													ul.cat-menu__sub
+														li.cat-menu__sub-item
+															a(href="#").cat-menu__sub-link Электромонтажные и электротехнические работы
+
+														li.cat-menu__sub-item
+															a(href="#").cat-menu__sub-link Капитальный ремонт
+
+														li.cat-menu__sub-item
+															a(href="#").cat-menu__sub-link Монтаж судовых систем
+
+														li.cat-menu__sub-item
+															a(href="#").cat-menu__sub-link Ремонт валопроводов
+
+														li.cat-menu__sub-item
+															a(href="#").cat-menu__sub-link Ремонт винто рулевых комплексов
+
+														li.cat-menu__sub-item
+															a(href="#").cat-menu__sub-link Ремонт донно-забортной арматуры
+
+														li.cat-menu__sub-item
+															a(href="#").cat-menu__sub-link Ремонт и обслуживание двигателей
+
+														li.cat-menu__sub-item
+															a(href="#").cat-menu__sub-link Ремонт судовых котельных установок
+
+														li.cat-menu__sub-item
+															a(href="#").cat-menu__sub-link Ремонт судовых трубопроводом
+
+														li.cat-menu__sub-item
+															a(href="#").cat-menu__sub-link Ремонт корпусов
+
+						li.main-menu__item
+							a(href="#").main-menu__link Наши работы
+
+						li.main-menu__item
+							a(href="#").main-menu__link Цены
+
+						li.main-menu__item
+							a(href="#").main-menu__link Контакты

@@ -1,0 +1,53 @@
+.header{background: $color-blue;}
+
+.header-top{
+	border-bottom: 1px solid rgba(255,255,255,0.16);
+	padding: 20px 0;
+
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__logo{
+		flex-shrink: 0;
+		margin-right: 120px;
+	}
+}
+
+.header-contact{
+	display: flex;
+	align-items: flex-start;
+	max-width: 230px;
+	margin: 0 15px;
+
+	&__icon{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		min-height: 20px;
+		margin-right: 10px;
+
+		.icon{fill: #fff;}
+	}
+
+	&__text{
+		@include font(normal, normal, 1.4rem, 1.4, #fff);
+
+		a{
+			color: #fff;
+			transition: color 0.2s ease 0s;
+		}
+
+		a:hover{color: $color-blue-light;}
+	}
+
+	&__phone{
+		font-size: 1.6rem;
+		font-weight: bold;
+	}
+
+	&:last-child{margin-right: 0;}
+}
