@@ -27,17 +27,21 @@ header.header
 									a(href="tel:+78122746945") +7 (812) 274-69-45
 									br
 									a(href="tel:+78122746949") +7 (812) 274-69-49
-	nav.main-menu
+
+						span.ic-hamburger.js-open-menu.d-lg-none
+							span
+	
+	nav.main-menu.js-main-menu
 		.container
 			.row
 				.col-12
 					ul.main-menu__list
 						li.main-menu__item
-							a(href="#").main-menu__link О компании
-								span.main-menu__arr
+							a(href="#").main-menu__link.js-main-menu-link О компании
+								span.main-menu__arr.js-main-menu-arr
 									+svg('ic-arrow-down','ic-arrow-down ic-stroke', '14', '9')
 
-							ul.main-menu__sub
+							ul.main-menu__sub.js-main-menu-sub
 								li.main-menu__sub-item 
 									a(href="#").main-menu__sub-link Пунтк 1
 
@@ -48,12 +52,11 @@ header.header
 									a(href="#").main-menu__sub-link Пунтк 3
 
 						li.main-menu__item.main-menu__item_cat
-							a(href="#").main-menu__link Услуги
-								span.main-menu__arr
+							a(href="#").main-menu__link.js-main-menu-link Услуги
+								span.main-menu__arr.js-main-menu-arr
 									+svg('ic-arrow-down','ic-arrow-down ic-stroke', '14', '9')
 
-							
-							.cat-menu
+							.cat-menu.js-main-menu-sub
 								.container
 									.row
 										.col-12

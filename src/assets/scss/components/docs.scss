@@ -4,6 +4,11 @@
 	.h1 + .btn{
 		margin-top: -2rem;
 	}
+
+	&__more{
+		text-align: center;
+		margin-top: 60px;
+	}
 }
 
 .docs-list{
@@ -15,5 +20,26 @@
 		max-width: calc(25% - 30px);
 		margin: 15px;
 		box-shadow: 6px 12px 0px 0px rgba(235,244,251,1);
+	}
+}
+
+@media (max-width: 991px) {
+	.docs-wrap{
+		.h1{text-align: center;}
+	}
+}
+
+@media (max-width: 767px) {
+	.docs-wrap{
+		.h1{text-align: left;}
+
+		&__more{
+			margin-top: 35px;
+			.btn{min-width: 290px;}
+		}
+	}
+
+	.docs-list{
+		&__item{max-width: calc(50% - 30px);}
 	}
 }

@@ -28,3 +28,17 @@
 		@include font(normal, normal, 2.6rem, 1.4, $color-text);
 	}
 }
+
+@media (max-width: 991px) {
+	.about-contacts{margin-top: 80px;}
+	
+	.contact-item{
+		&__text{font-size: 2rem;}
+	}
+}
+
+@media (max-width: 767px) {
+	.about-contacts{
+		&__text{padding-top: 0;}
+	}
+}

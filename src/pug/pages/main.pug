@@ -10,7 +10,7 @@ block content
 				.col-12
 					h1 ООО «СУДОЭКОЛОГИЯ», основанное в 1989 году, основным видом деятельности которого является судостроение и судоремонт
 					
-	section.top-img
+	section.top-img(style="background-image: url(assets/img/top-img.jpg)")
 		img(src="assets/img/top-img.jpg", alt="")
 
 	section.advant-wrap.mb-indent
@@ -56,7 +56,7 @@ block content
 							{title:'Постройка, переоборудование, модернизация судов', text:'Фирма имеет опыт выполнения работ под надзором Bureau Veritas'},
 						]
 					each item in list
-						.col-3
+						.col-md-4.col-lg-3
 							.services__item
 								.services__title= item.title
 								.services__text= item.text
@@ -116,10 +116,10 @@ block content
 	section.docs-wrap.m-indent
 		.container
 			.row
-				.col-4
+				.col-lg-4
 					h2.h1 Лицензии и сертификаты
 
-				.col-8
+				.col-lg-8
 					.docs-list
 						-
 							var list=[
@@ -136,7 +136,7 @@ block content
 	section.about-contacts.mb-indent
 		.container
 			.row
-				.col-4
+				.col-md-6.col-lg-4
 					.about-contacts__text
 						h2.h1 Где мы находимся
 
@@ -146,7 +146,7 @@ block content
 
 							.contact-item__text 193036, Россия, Санкт-Петербург, 4-я Советская ул., д. 7
 
-				.col-8
+				.col-md-6.col-lg-8
 					.about-contacts__img
 						img(src="assets/img/map.jpg", alt="")
 
@@ -184,17 +184,17 @@ block content
 	section.docs-wrap.m-indent
 		.container
 			.row
-				.col-4
+				.col-lg-4
 					h2.h1 Отзывы клиентов
 
-					a.btn(href='#')
+					a.btn(href='#').d-none.d-lg-inline-flex
 						.btn__text Все отзывы
 						.btn__blobs
 							div
 							div
 							div
 
-				.col-8
+				.col-lg-8
 					.docs-list
 						-
 							var list=[
@@ -207,6 +207,15 @@ block content
 							.docs-list__item
 								a(href='assets/img/'+item.img data-fancybox='document')
 									img(src='assets/img/'+item.img alt='')
+
+				.col-12.d-lg-none
+					.docs-wrap__more
+						a.btn(href='#')
+							.btn__text Все отзывы
+							.btn__blobs
+								div
+								div
+								div
 	
 	.bg-wave.m-indent
 
@@ -216,7 +225,7 @@ block content
 				.col-12
 					h2.h1.text-center О нас
 
-				.col-7
+				.col-lg-7
 					.about__text
 						p ООО «СУДОЭКОЛОГИЯ», основанное в 1989 году, основным видом деятельности которого является судостроение и судоремонт, имеет лицензии для выполнения следующих видов работ:
 
@@ -236,7 +245,7 @@ block content
 								div
 								div
 
-				.col-4.offset-1
+				.col-4.offset-xl-1.d-none.d-lg-block
 					.about__img
 						img(src="assets/img/about.jpg", alt="")
 					
@@ -255,7 +264,7 @@ block content
 							{img:'news3.jpg', title:'Система контроля качества соответствует требованиям Международного стандарта качества', date:'12', month:'апр'},
 						]
 					each item, index in list
-						div(class=index==0?'col-6':'col-3')
+						div(class=index==0?'col-md-4 col-lg-6':'col-md-4 col-lg-3')
 							.news-item
 								a(href="#").news-item__img-wrap
 									.news-item__img(style="background-image: url(assets/img/"+item.img+")")
@@ -270,7 +279,7 @@ block content
 	section.form-page.bg-light-blue.last-elem
 		.container
 			.row
-				.col-7
+				.col-md-10.col-lg-7
 					.js-valid-form
 						form.form-site
 							.form-site__title Появились вопросы или хотите оставить заявку?
@@ -305,6 +314,6 @@ block content
 											span.input-check__text Я согласен на обработку моих 
 												a(href="#") персональных данных
 
-				.col-5
+				.col-md-2.col-lg-5.d-none.d-md-block
 					.form-page__img
 						img(src="assets/img/form-img.png", alt="")

@@ -49,3 +49,46 @@
 	@include font(normal, normal, 1.6rem, 1.4, #fff);
 	padding-top: 78px;
 }
+
+@media (max-width: 1239px) {
+	.footer-top{
+		&__text{font-size: 1.8rem;}
+	}
+}
+
+@media (max-width: 767px) {
+	.footer{
+		text-align: center;
+		padding: 60px 0;
+	}
+
+	.footer-top{
+		&__phone{
+			font-size: 2.2rem;
+			line-height: 1.45;
+		}
+
+		&__text{
+			font-size: 1.6rem;
+			line-height: 1.4;
+			margin-top: 18px;
+		}
+	}
+
+	.footer-menu{
+		column-count: auto;
+		margin-top: 60px;
+
+		&__item{margin-bottom: 16px;}
+	}
+
+	.footer-bottom{
+		font-size: 1.4rem;
+		padding-top: 43px;
+
+		&__polit{
+			display: inline-block;
+			margin-top: 15px;
+		}
+	}
+}

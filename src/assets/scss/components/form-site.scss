@@ -165,12 +165,27 @@
 	}
 }
 
+@media (max-width: 991px) {
+	.form-page{
+		&__img{margin-left: -55px;}
+		.form-site{padding-right: 0;}
+	}
+}
+
 @media (max-width: 767px) {
+	.form-page{
+		padding: 30px 0;
+		.form-site__bottom .btn{width: 100%;}
+	}
+
 	.form-site{
 		&__content{
 			margin-left: 0;
 			margin-right: 0;
 		}
+
+		&__title{font-size: 3.2rem;}
+		&__text{font-size: 1.6rem;}
 
 		&__item,
 		&__item_half{
@@ -179,11 +194,17 @@
 			margin-right: 0;
 		}
 
-		&__bottom{display: block;}
+		&__item{margin-bottom: 20px;}
 
-		&__polit{
-			margin-left: 0;
-			margin-top: 30px;
+		&__bottom{
+			flex-direction: column-reverse;
+			justify-content: flex-start;
+			align-items: flex-start;
+			margin-top: 10px;
+
+			.btn{width: 100%;}
 		}
+
+		&__polit{margin: 0 0 30px 0;}
 	}
 }

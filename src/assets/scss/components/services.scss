@@ -29,3 +29,24 @@
 		margin-top: 11px;
 	}
 }
+
+@media (max-width: 767px) {
+	.services{
+		margin-bottom: -40px;
+		
+		&__item{
+			padding: 8px 0 7px 20px;
+			margin-bottom: 40px;
+		}
+
+		&__text{display: none;}
+
+		&__item::before{
+			width: 4px;
+			height: 100%;
+			top: 0;
+		}
+
+		&__title{font-size: 1.4rem;}
+	}
+}

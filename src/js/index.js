@@ -20,26 +20,19 @@ if($('.js-project-slider').length){
 		infinite: true,
 		slidesToShow: 3,
 		slidesToScroll: 3,
+		arrows: true,
 		prevArrow: '<button id="prev" type="button" class="btn-arr btn-arr_left"><svg class="icon ic-arrow-left" width="14" height="24"><use xlink:href="/assets/sprites/sprite.svg#ic-arrow-left"></use></svg></button>',
 		nextArrow: '<button id="next" type="button" class="btn-arr btn-arr_right"><svg class="icon ic-arroe-right" width="14" height="24"><use xlink:href="/assets/sprites/sprite.svg#ic-arrow-right"></use></svg></button>',
-		// responsive: [
-		// 	{
-		// 		breakpoint: 992,
-		// 		settings: {
-		// 			slidesToShow: 3,
-		// 			slidesToScroll: 3,
-		// 			dots: true,
-		// 		}
-		// 	},
-		// 	{
-		// 		breakpoint: 768,
-		// 		settings: {
-		// 			slidesToShow: 2,
-		// 			slidesToScroll: 2,
-		// 			dots: true,
-		// 		}
-		// 	},
-		// ]
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: false,
+				}
+			},
+		]
 	});
 }
 
@@ -49,8 +42,25 @@ if($('.js-partners-slider').length){
 		infinite: true,
 		slidesToShow: 4,
 		slidesToScroll: 1,
+		arrows: true,
 		prevArrow: '<button id="prev" type="button" class="btn-arr btn-arr_left"><svg class="icon ic-arrow-left" width="14" height="24"><use xlink:href="/assets/sprites/sprite.svg#ic-arrow-left"></use></svg></button>',
 		nextArrow: '<button id="next" type="button" class="btn-arr btn-arr_right"><svg class="icon ic-arroe-right" width="14" height="24"><use xlink:href="/assets/sprites/sprite.svg#ic-arrow-right"></use></svg></button>',
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 3,
+					arrows: true,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					arrows: false,
+				}
+			},
+		]
 	});
 
 	$('.js-partners-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
@@ -144,3 +154,18 @@ if($('.js-valid-form').length){
 		e.preventDefault();
 	});
 }
+
+// Открыть/Закрыть мобильное меню
+if($('.js-open-menu').length){
+	$('.js-open-menu').on('click', function(){
+		$('.js-main-menu').toggleClass('active');
+		$(this).toggleClass('active');
+		$('.js-body').toggleClass('no-scroll');
+	});
+}
+
+$('.js-main-menu-arr').on('click', function(e){
+	e.preventDefault();
+	$(this).toggleClass('active');
+	$(this).closest('.js-main-menu-link').siblings('.js-main-menu-sub').slideToggle(300);
+});

@@ -32,7 +32,6 @@
 
 .progress {
 	display: block;
-	// width: ca100%;
 	height: 6px;
 	border-radius: 3px;
 	overflow: hidden;
@@ -45,17 +44,14 @@
   }
 
 @media (max-width: 1300px) {
-	.btn-arr_left{left: -25px;}
-	.btn-arr_right{right: -25px;}
+	.btn-arr_left{left: -40px;}
+	.btn-arr_right{right: -40px;}
 }
 
-@media (max-width: 991px) {
-	.btn-arr{
-		transform: none;
-		top: auto;
-		bottom: 10px;
-
-		&_left{left: 0;}
-		&_right{right: 0;}
+@media (max-width: 767px) {
+	.progress{
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: 0;
 	}
 }

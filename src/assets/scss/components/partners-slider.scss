@@ -30,3 +30,19 @@
 		margin-top: 20px;
 	}
 }
+
+@media (max-width: 767px) {
+	.partners-slider{
+		margin-left: -15px;
+		margin-right: -15px;
+
+		&__img{height: 120px;}
+		&__text{font-size: 1.4rem;}
+		.slick-slide{margin: 0 10px;}
+
+		.slick-list{
+			padding-right: 45%;
+			padding-left: 20px;
+		}
+	}
+}

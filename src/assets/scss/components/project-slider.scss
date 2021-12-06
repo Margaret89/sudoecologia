@@ -75,3 +75,28 @@
 
 	&__val{font-weight: bold;}
 }
+
+@media (max-width: 991px) {
+	.project-item{
+		&__title{font-size: 1.8rem;}
+	}
+}
+
+@media (max-width: 767px) {
+	.projects-wrap{
+		&__more{
+			margin-top: 22px;
+
+			.btn{min-width: 290px;}
+		}
+	}
+
+	// .project-item{
+	// 	&__img-wrap{
+	// 		padding-bottom: 76%;
+	// 		margin-bottom: 15px;
+	// 	}
+	// }
+
+	.pr-item-param{margin-top: 8px;}
+}

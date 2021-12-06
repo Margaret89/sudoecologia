@@ -32,3 +32,36 @@
 		@include font(normal, normal, 1.6rem, 1.2, $color-text);
 	}
 }
+
+@media (max-width: 991px) {
+	.advant{
+		&__text{font-size: 1.5rem;}
+	}
+}
+
+@media (max-width: 767px) {
+	.advant{
+		display: block;
+
+		&__item:not(:last-child){background-repeat: none;}
+
+		&__item{
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: flex-start;
+			width: auto;
+			min-height: auto;
+			text-align: left;
+			padding: 32px 25px 33px;
+		}
+
+		&__icon{
+			flex-shrink: 0;
+			margin-right: 12px;
+			margin-bottom: 0;
+		}
+
+		&__text{font-size: 1.6rem;}
+		&__icon{margin-top: -4px;}
+	}
+}

@@ -59,3 +59,16 @@
 		margin-top: 10px;
 	}
 }
+
+@media (max-width: 991px) {
+	.news-item{
+		&__num{font-size: 3rem;}
+	}
+}
+
+@media (max-width: 767px) {
+	.news-item{
+		&__num{font-size: 4rem;}
+		&__img-wrap{padding-bottom: 62%;}
+	}
+}

@@ -1,7 +1,5 @@
 /*-------------- about -----------------*/
 .about{
-	overflow: hidden;
-
 	&__text{
 		font-size: 2rem;
 		line-height: 1.4;
@@ -12,5 +10,11 @@
 		text-align: right;
 
 		img{border-radius: 12px 0 0 12px;}
+	}
+}
+
+@media (max-width: 991px) {
+	.about{
+		&__text{font-size: 1.6rem;}
 	}
 }
