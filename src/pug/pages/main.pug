@@ -86,25 +86,26 @@ block content
 								a(href="#").project-item__img-wrap
 									.project-item__img(style="background-image: url(assets/img/"+item.img+")")
 								
-								.project-item__title
-									a(href="#")= item.title
+								.project-item__content
+									.project-item__title
+										a(href="#")= item.title
 
-								.pr-item-param
-									-
-										var params=[
-											{label:'длина габаритная', val:'24,2', val2:'м'},
-											{label:'ширина габаритная', val:'6,2', val2:'м'},
-											{label:'высота борта', val:'2,8', val2:'м'},
-											{label:'водоизмещение', val:'85,0', val2:'т'},
-											{label:'число и мощность главных двигателей VOLVO-PENTA', val:'2х173', val2:'кВт'},
-										]
-									
-									each param in params
-										.pr-item-param__item
-											.pr-item-param__label= param.label
-											.pr-item-param__val= param.val
-												|&nbsp
-												= param.val2
+									.pr-item-param
+										-
+											var params=[
+												{label:'длина габаритная', val:'24,2', val2:'м'},
+												{label:'ширина габаритная', val:'6,2', val2:'м'},
+												{label:'высота борта', val:'2,8', val2:'м'},
+												{label:'водоизмещение', val:'85,0', val2:'т'},
+												{label:'число и мощность главных двигателей VOLVO-PENTA', val:'2х173', val2:'кВт'},
+											]
+										
+										each param in params
+											.pr-item-param__item
+												.pr-item-param__label= param.label
+												.pr-item-param__val= param.val
+													|&nbsp
+													= param.val2
 
 					.projects-wrap__more
 						a.btn(href='#')
@@ -276,45 +277,5 @@ block content
 
 								.news-item__title
 									a(href="#")= item.title
-
-	section.form-page.bg-light-blue.last-elem
-		.container
-			.row
-				.col-md-10.col-lg-7
-					.js-valid-form
-						form.form-site
-							.form-site__title Появились вопросы или хотите оставить заявку?
-
-							.form-site__text Наш специалист свяжется с вами в течении <b>5 минут</b>!
-							
-							.form-site__content
-								.form-site__item.form-site__item_half.js-form-site-item
-									.form-site__label Ваше имя
-									.form-site__field
-										input(type="text", required="required")
-
-								.form-site__item.form-site__item_half.js-form-site-item
-									.form-site__label Ваш телефон
-									.form-site__field
-										input(type="text", class="js-phone", required="required")
-
-							.form-site__bottom
-								button(type="submit").btn.js-btn-submit
-									.btn__text Отправить
-									.btn__blobs
-										div
-										div
-										div
-
-								.form-site__polit.js-form-site-polit
-									.input-check.input-check_light
-										input#polit1(type='checkbox', checked='checked', required="required")
-										label.input-check__label(for='polit1')
-											span.input-check__mark
-												+svg('ic-check','ic-check', '10', '8')
-											span.input-check__text Я согласен на обработку моих 
-												a(href="#") персональных данных
-
-				.col-md-2.col-lg-5.d-none.d-md-block
-					.form-page__img
-						img(src="assets/img/form-img.png", alt="")
+	
+	include ../components/form

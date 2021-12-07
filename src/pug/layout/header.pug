@@ -112,7 +112,20 @@ header.header
 															a(href="#").cat-menu__sub-link Ремонт судовых трубопроводом
 
 														li.cat-menu__sub-item
-															a(href="#").cat-menu__sub-link Ремонт корпусов
+															a(href="#").cat-menu__sub-link.js-main-menu-link Ремонт корпусов
+																span.cat-menu__sub-arr.js-main-menu-arr
+																	+svg('ic-arrow-down','ic-arrow-down ic-stroke', '14', '9')
+
+															ul.cat-menu__sub.js-main-menu-sub
+																li.cat-menu__sub-item
+																	a(href="#").cat-menu__sub-link Очистка и окраска корпусов судов, механизмов и деталей
+
+																li.cat-menu__sub-item
+																	a(href="#").cat-menu__sub-link Реновация, достройка и отделка судов
+
+								
+
+							.cat-menu.js-main-menu-sub
 
 						li.main-menu__item
 							a(href="#").main-menu__link Наши работы

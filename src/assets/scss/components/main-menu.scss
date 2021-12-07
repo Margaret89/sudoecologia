@@ -111,6 +111,17 @@
 	}
 
 	&__sub-link:hover{color: #68a3ce;}
+	&__sub &__sub &__sub-link{font-size: 1.4rem;}
+
+	&__sub-arr{
+		.icon.ic-stroke{
+			stroke: #fff;
+			transition: stroke 0.2s ease 0s;
+		}
+	}
+
+	&__sub-link:hover > &__sub-arr .icon.ic-stroke{stroke: #68a3ce;}
+	&__sub &__sub{display: none;}
 }
 
 @media (min-width: 992px) {
@@ -134,12 +145,38 @@
 		left: 0;
 		z-index: 100;
 
+		&__item{position: relative;}
+		&__sub-item{position: relative;}
 		&__item:nth-child(2){width: calc(66.66% - 50px)}
 
-		&__item:nth-child(2) &__sub{
-			column-count: 2;
-			column-gap: 50px;
+		&__item:nth-child(2)>&__sub{
+			// column-count: 2;
+			// column-gap: 50px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
 		}
+
+		&__item:nth-child(2)>&__sub>&__sub-item{width: calc(50% - 25px);}
+
+		&__item:nth-child(2)>&__sub>&__sub>&__sub-item>&__sub-link{
+			display: flex;
+			align-items: center;
+		}
+
+		&__item:nth-child(2)::after{
+			content: '';
+			display: block;
+			width: 100%;
+			height: 1px;
+			background: #0069b5;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+
+		&__sub-item:hover > &__sub{display: block;}
+		&__sub &__sub &__sub-item:last-child{border-bottom: none;}
 	}
 }
 
@@ -175,7 +212,11 @@
 			width: 40px;
 			height: 40px;
 			margin: -10px 0 -10px 20px;
+
+			.icon{transition: all 0.2s ease 0s;}
 		}
+
+		&__arr.active .icon{transform: rotate(180deg);}
 
 		&__sub{
 			width: auto;
@@ -217,10 +258,19 @@
 		}
 
 		&__link{
-			display: block;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
 			font-size: 1.8rem;
 			font-weight: bold;
 			padding: 0 0 7px;
+		}
+
+		&__sub-link{
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			width: 100%;
 		}
 
 		&__sub{margin-top: 0;}
@@ -233,5 +283,20 @@
 			padding-bottom: 7px;
 			margin-bottom: 20px;
 		}
+
+		&__sub-arr{
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 40px;
+			height: 40px;
+			margin: -10px 0 -10px 20px;
+
+			.icon{transition: all 0.2s ease 0s;}
+		}
+
+		&__sub-arr.active .icon{transform: rotate(180deg);}
+		&__sub &__sub{padding-left: 10px;}
+		&__sub &__sub &__sub-item{border-bottom: none;}
 	}
 }

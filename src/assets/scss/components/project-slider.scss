@@ -77,9 +77,30 @@
 	&__val{font-weight: bold;}
 }
 
+.project-list{
+	.project-item{margin-bottom: 6rem;}
+}
+
 @media (max-width: 991px) {
 	.project-item{
 		&__title{font-size: 1.8rem;}
+	}
+}
+@media (min-width: 768px) {
+	.project-item{
+		&_big{
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+
+		&_big &__img-wrap{
+			width: calc(66.66% - 15px);
+			padding-bottom: 47%;
+			margin-bottom: 0;
+		}
+
+		&_big &__content{width: calc(33.33% - 15px);}
 	}
 }
 
@@ -100,4 +121,8 @@
 	// }
 
 	.pr-item-param{margin-top: 8px;}
+
+	.project-list{
+		.project-item{margin-bottom: 4rem;}
+	}
 }

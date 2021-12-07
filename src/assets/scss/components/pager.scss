@@ -1,0 +1,57 @@
+/*-------------- pager -----------*/
+.pager{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-left: -3px;
+	margin-right: -3px;
+
+	&__nav,
+	&__item{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		vertical-align: top;
+		width: 40px;
+		height: 40px;
+		margin: 3px;
+		text-decoration: none;
+		cursor: pointer;
+		border-radius: 12px;
+		border: 1px solid #e2e2e2;
+		transition: all 0.2s ease 0s;
+	}
+
+	&__nav{
+		.icon{
+			fill: $color-blue;
+			transition: fill 0.2s ease 0s;
+		}
+	}
+
+	&__item{
+		@include font(normal, normal, 1.6rem, 1, $color-blue);
+	}
+
+	&__item:hover,
+	&__item.active,
+	&__nav:hover,
+	&__nav.active{
+		color: #fff;
+		border-color: $color-blue;
+		background: $color-blue;
+	}
+
+	&__nav:hover,
+	&__nav.active{
+		.icon{fill: #fff;}
+	}
+
+	&__nav.disable,
+	&__nav.disable:hover{
+		cursor: auto;
+		opacity: 0.5;
+
+		.icon{fill: $color-text;}
+	}
+}

@@ -1,0 +1,67 @@
+/*-------------- left-menu -----------------*/
+.left-menu{
+	&,
+	&__item,
+	&__sub,
+	&__sub-item{
+		padding: 0;
+		margin: 0;list-style: none;
+	}
+
+	&__link{
+		@include font(normal, bold, 2rem, 1.4, $color-text);
+		text-decoration: none;
+		transition: color 0.2s ease 0s;
+	}
+
+	&__link:hover,
+	&__link.active{
+		color: $color-blue;
+	}
+
+	&__sub{margin-top: 12px;}
+	&__sub-item{padding: 15px 0 14px;}
+	&__sub-item:not(:last-child){border-bottom: 1px solid #e2e2e2;}
+
+	&__item:not(:last-child){
+		padding-bottom: 21px;
+		margin-bottom: 40px;
+		border-bottom: 3px solid $color-blue;
+	}
+
+	&__sub-link{
+		@include font(normal, normal, 1.6rem, 1.4, $color-blue);
+		text-decoration: none;
+		transition: color 0.2s ease 0s;
+	}
+
+	&__sub-link:hover,
+	&__sub-link.active{
+		color: $color-blue-light;
+	}
+
+	&__sub &__sub{
+		display: none;
+		padding-left: 10px;
+		margin-top: 4px;
+	}
+
+	&__sub-arr{
+		margin-left: 10px;
+		
+		.icon.ic-stroke{
+			stroke: $color-blue;
+			transition: stroke 0.2s ease 0s;
+		}
+	}
+
+	&__sub-link:hover &__sub-arr{stroke: $color-blue-light;}
+
+	&__sub &__sub &__sub-item{
+		border-bottom: none;
+		padding: 10px 0;
+	}
+
+	&__sub &__sub &__sub-link{font-size: 1.4rem;}
+	&__sub-item:hover &__sub{display: block;}
+}

@@ -1,0 +1,89 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Наши работы';
+
+block content
+	.page-content
+		.container
+			.row
+				.col-lg-3.d-none.d-lg-block
+					include ../components/left-menu
+
+				.col-lg-9
+					-
+						var breadcrumbs=[
+							{href:'/',name:'Главная'},
+							{href:'#',name:'Наши работы'},
+						];
+
+					+breadcrumbs(breadcrumbs)
+
+					.page-header
+						h1 Наши работы
+
+					.project-list
+						.row
+							.col-12
+								.project-item.project-item_big
+									a(href="#").project-item__img-wrap
+										.project-item__img(style="background-image: url(assets/img/project-list1.jpg)")
+									
+									.project-item__content
+										.project-item__title
+											a(href="#") Проект 82390 «Моторная яхта» (т/х «Никита», построен в 2003 г.)
+
+										.pr-item-param
+											-
+												var params=[
+													{label:'длина габаритная', val:'24,2', val2:'м'},
+													{label:'ширина габаритная', val:'6,2', val2:'м'},
+													{label:'высота борта', val:'2,8', val2:'м'},
+													{label:'водоизмещение', val:'85,0', val2:'т'},
+													{label:'число и мощность главных двигателей VOLVO-PENTA', val:'2х173', val2:'кВт'},
+												]
+											
+											each param in params
+												.pr-item-param__item
+													.pr-item-param__label= param.label
+													.pr-item-param__val= param.val
+														|&nbsp
+														= param.val2
+						.row
+							-
+								var list=[
+									{img:'project-list2.jpg', title:'Проект 82390 «Моторная яхта» (т/х «Никита», построен в 2003 г.)'},
+									{img:'project-list3.jpg', title:'Проект 911В Судно экологического обеспечения «РЕДУТ» (построен в 2006 г.)'},
+									{img:'project-list4.jpg', title:'Проект 8276 «Плавучий ресторан» (т/х «Дунаевский», построен в 2007 г.)'},
+									{img:'project-list5.jpg', title:'Проект 911В Судно экологического обеспечения «РЕДУТ» (построен в 2006 г.)'},
+									{img:'project-list6.jpg', title:'Проект 82390 «Моторная яхта» (т/х «Никита», построен в 2003 г.)'},
+									{img:'project-list7.jpg', title:'Проект 82390 «Моторная яхта» (т/х «Никита», построен в 2003 г.)'},
+									{img:'project-list8.jpg', title:'Проект 8276 «Плавучий ресторан» (т/х «Дунаевский», построен в 2007 г.)'},
+									{img:'project-list9.jpg', title:'Проект 911В Судно экологического обеспечения «РЕДУТ» (построен в 2006 г.)'},
+									
+								]
+							each item in list
+								.col-md-4
+									.project-item
+										a(href="#").project-item__img-wrap
+											.project-item__img(style="background-image: url(assets/img/"+item.img+")")
+										
+										.project-item__content
+											.project-item__title
+												a(href="#")= item.title
+
+					.pager
+						a.pager__nav.disable(href="#")
+							+svg('ic-arrow-left','ic-arrow-left', '8', '12')
+
+						a.pager__item.active(href='#') 1
+						a.pager__item(href='#') 2
+						a.pager__item(href='#') 3
+						a.pager__item(href='#') 4
+						a.pager__item(href='#') 5
+						a.pager__item(href='#') 6
+
+						a.pager__nav(href="#")
+							+svg('ic-arrow-right','ic-arrow-right', '8', '12')
+
+	include ../components/form

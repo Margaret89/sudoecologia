@@ -1,0 +1,41 @@
+section.form-page.bg-light-blue.last-elem.mt-indent
+	.container
+		.row
+			.col-md-10.col-lg-7
+				.js-valid-form
+					form.form-site
+						.form-site__title Появились вопросы или хотите оставить заявку?
+
+						.form-site__text Наш специалист свяжется с вами в течении <b>5 минут</b>!
+						
+						.form-site__content
+							.form-site__item.form-site__item_half.js-form-site-item
+								.form-site__label Ваше имя
+								.form-site__field
+									input(type="text", required="required")
+
+							.form-site__item.form-site__item_half.js-form-site-item
+								.form-site__label Ваш телефон
+								.form-site__field
+									input(type="text", class="js-phone", required="required")
+
+						.form-site__bottom
+							button(type="submit").btn.js-btn-submit
+								.btn__text Отправить
+								.btn__blobs
+									div
+									div
+									div
+
+							.form-site__polit.js-form-site-polit
+								.input-check.input-check_light
+									input#polit1(type='checkbox', checked='checked', required="required")
+									label.input-check__label(for='polit1')
+										span.input-check__mark
+											+svg('ic-check','ic-check', '10', '8')
+										span.input-check__text Я согласен на обработку моих 
+											a(href="#") персональных данных
+
+			.col-md-2.col-lg-5.d-none.d-md-block
+				.form-page__img
+					img(src="assets/img/form-img.png", alt="")

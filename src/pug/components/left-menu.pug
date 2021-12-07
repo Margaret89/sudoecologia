@@ -1,0 +1,52 @@
+ul.left-menu
+	-
+		var list=[
+			{
+				text:'Ремонт судов',
+				sect:[
+					{text:'Демонтаж судов'},
+					{text:'Дефектация', status:'active'},
+					{text:'Испытания судов'},
+					{text:'Обслуживания судов'},
+					{text:'Постройка, переоборудование, модернизация судов'},
+				]
+			},
+			{
+				text:'Ремонт и обслуживание оборудования судов',
+				sect:[
+					{text:'Электромонтажные и электротехнические работы'},
+					{text:'Капитальный ремонт'},
+					{text:'Монтаж судовых систем'},
+					{text:'Ремонт валопроводов'},
+					{text:'Ремонт винто рулевых комплексов'},
+					{text:'Ремонт донно-забортной арматуры'},
+					{text:'Ремонт и обслуживание двигателей'},
+					{text:'Ремонт судовых котельных установок'},
+					{text:'Ремонт судовых трубопроводом'},
+					{
+						text:'Ремонт корпусов',
+						sub:[
+							{text:'Очистка и окраска корпусов судов, механизмов и деталей'},
+							{text:'Реновация, достройка и отделка судов'},
+						]
+					},
+				]
+			},
+		]
+	each item in list
+		li.left-menu__item
+			a(href="#").left-menu__link= item.text
+
+			ul.left-menu__sub
+				each sect in item.sect
+					li.left-menu__sub-item
+						a(href="#", class=sect.status?'active':'').left-menu__sub-link.js-left-menu-link= sect.text
+							if(sect.sub)
+								span.left-menu__sub-arr.js-left-menu-arr
+									+svg('ic-arrow-down','ic-arrow-down ic-stroke', '14', '9')
+
+						if(sect.sub)
+							ul.left-menu__sub
+								each sub in sect.sub
+									li.left-menu__sub-item
+										a(href="#").left-menu__sub-link= sub.text
