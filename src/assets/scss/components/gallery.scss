@@ -1,0 +1,12 @@
+/*-------------- gallery -----------------*/
+.gallery{
+	margin-top: 3rem;
+
+	&__item{margin-bottom: 3rem;}
+}
+
+@media (max-width: 767px) {
+	.gallery{
+		&__item{margin-bottom: 1.5rem;}
+	}
+}

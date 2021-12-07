@@ -1,0 +1,23 @@
+/*-------------- prices -----------------*/
+.prices{
+	&__item{
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 18px;
+		@include font(normal, normal, 2rem, 1.5, $color-text);
+		border-bottom: 1px solid #e2e2e2;
+		margin-bottom: 21px;
+	}
+
+	&__val{
+		font-weight: bold;
+		white-space: nowrap;
+		margin-left: 15px;
+	}
+}
+
+@media (max-width: 767px) {
+	.prices{
+		&__item{font-size: 1.6rem;}
+	}
+}

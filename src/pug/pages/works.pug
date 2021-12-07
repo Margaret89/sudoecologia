@@ -2,6 +2,7 @@ extends ../layout/main
 
 block variables
 	- var title = 'Наши работы';
+	- var h1 = 'Наши работы';
 
 block content
 	.page-content
@@ -19,8 +20,7 @@ block content
 
 					+breadcrumbs(breadcrumbs)
 
-					.page-header
-						h1 Наши работы
+					+h1(h1)
 
 					.project-list
 						.row

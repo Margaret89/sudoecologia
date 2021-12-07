@@ -74,8 +74,8 @@ h5,.h5{
 	margin-bottom: 1rem;
 }
 
-ul, ol{padding-left: 30px;}
-li{margin-bottom: 2rem;}
+ul, ol{padding-left: 25px;}
+li{margin-bottom: 1.6rem;}
 
 .wrapper{
 	display: flex;
@@ -166,6 +166,10 @@ button.btn:hover{
 }
 
 p + .btn{margin-top: 2rem;}
+p + img{margin-top: 1rem;}
+img + p, img + ul, img + ol{margin-top: 3rem;}
+p + h2, p + .h2, ol + h2, ol + .h2, ul + h2, ul + .h2, img + h2, img + .h2{margin-top: 6rem;}
+ol + p, ul + p{margin-top: 3rem;}
 
 .code{
 	background-color: #f7f7f7;
@@ -204,6 +208,8 @@ p + .btn{margin-top: 2rem;}
 	background: url(../img/wave.png) no-repeat bottom center;
 }
 
+.border-radius{border-radius: 12px;}
+
 @media (max-width: 991px) {
 	.h1, h1{font-size: 4rem;}
 	.mb-indent{margin-bottom: 80px;}
@@ -226,4 +232,6 @@ p + .btn{margin-top: 2rem;}
 	}
 
 	.page-content{margin-top: 3rem;}
+
+	p + h2, p + .h2, ol + h2, ol + .h2, ul + h2, ul + .h2, img + h2, img + .h2{margin-top: 4rem;}
 }
