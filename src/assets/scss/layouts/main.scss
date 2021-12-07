@@ -25,13 +25,12 @@ body.no-scroll{
 
 img{max-width: 100%;}
 
-a{color: $color-blue;}
-
-a:hover,
-a:active,
-a:focus{
-	text-decoration: none;
+a{
+	color: $color-blue;
+	text-decoration: underline;
 }
+
+a:hover{text-decoration: none;}
 
 p{
 	padding: 0;

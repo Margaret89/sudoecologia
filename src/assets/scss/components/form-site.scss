@@ -133,6 +133,13 @@
 				font-size: 1.4rem;
 				color: #737e87;
 			}
+
+			a{
+				text-decoration: none;
+				transition: color 0.2s ease 0s;
+			}
+
+			a:hover{color: $color-blue-light}
 		}
 	}
 

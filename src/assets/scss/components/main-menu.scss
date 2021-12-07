@@ -38,6 +38,7 @@
 
 	&__link{
 		@include font(normal, bold, 1.8rem, 1.2, #fff);
+		text-decoration: none;
 		padding: 20px 15px;
 		transition: background 0.2s ease 0s;
 	}
@@ -54,6 +55,7 @@
 		display: block;
 		padding: 10px 15px;
 		@include font(normal, normal, 1.4rem, 1.2, #fff);
+		text-decoration: none;
 		transition: color 0.2s ease 0s;
 	}
 
@@ -89,6 +91,7 @@
 
 	&__link{
 		@include font(normal, bold, 2.6rem, 1.4, #fff);
+		text-decoration: none;
 		transition: color 0.2s ease 0s;
 	}
 
@@ -103,6 +106,7 @@
 
 	&__sub-link{
 		@include font(normal, normal, 1.8rem, 1.4, #fff);
+		text-decoration: none;
 		transition: color 0.2s ease 0s;
 	}
 

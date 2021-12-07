@@ -22,6 +22,14 @@
 	&__title{
 		@include font(normal, bold, 1.6rem, 1.4, $color-blue);
 		text-transform: uppercase;
+
+		a{
+			color: $color-blue;
+			text-decoration: none;
+			transition: color 0.2s ease 0s;
+		}
+
+		a:hover{color: $color-blue-light;}
 	}
 
 	&__text{
